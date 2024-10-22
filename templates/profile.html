@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .profile-container {
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #ff8800;
+        }
+        .user-data {
+            margin: 20px 0;
+        }
+        .user-data span {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-container">
+    <h2>Профиль пользователя</h2>
+    <div class="user-data">
+        <span><strong>Имя пользователя:</strong> {{ username }}</span>
+        <span><strong>Email:</strong> {{ email }}</span>
+        <span><strong>Пароль:</strong> (скрыт)</span>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация успешна</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .success-container {
+            background-color: #1a1a1a;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #ff8800;
+        }
+        p {
+            margin: 20px 0;
+        }
+        button {
+            padding: 12px 24px;
+            background-color: #ff8800; /* Flipper Zero's orange */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #e67700;
+            transform: translateY(-2px);
+        }
+        button:active {
+            background-color: #cc6600;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<div class="success-container">
+    <h2>Регистрация успешна!</h2>
+    <p>Ваш аккаунт был успешно создан.</p>
+    <button onclick="window.location.href='/login'">Войти в аккаунт</button>
+</div>
+
+</body>
+</html>
