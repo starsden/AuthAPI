@@ -42,7 +42,7 @@ Make sure you have the following installed:
    ```
    # On Windows use
   ```bash
-  `venv\Scripts\activate`
+  venv\Scripts\activate
   ```
 4. Install the required packages:
 
