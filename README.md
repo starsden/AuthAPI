@@ -41,9 +41,9 @@ Make sure you have the following installed:
    source venv/bin/activate
    ```
    # On Windows use
-  ```bash
-  venv\Scripts\activate
-  ```
+   ```bash
+   venv\Scripts\activate
+   ```
 4. Install the required packages:
 
    ```bash
