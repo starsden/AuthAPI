@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
     <style>
-         @font-face {
+        @font-face {
             font-family:"Flipo";
             src: url(/haxrcorp-4089/haxrcorp-4089.ttf) format("truetype");
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            background: linear-gradient(135deg, #FF8200, #1b0c00);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            position: relative;
         }
         .registration-container {
             background-color: white;
@@ -59,14 +60,14 @@
             transition: border 0.3s ease;
         }
         input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
-            border-color: #9b59b6;
+            border-color:  #FF8200;
             outline: none;
             box-shadow: 0 0 8px rgba(155, 89, 182, 0.2);
         }
         button {
             width: 100%;
             padding: 12px;
-            background-color: #9b59b6;
+            background-color: #FF8200;
             color: white;
             border: none;
             border-radius: 8px;
@@ -75,11 +76,12 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
         button:hover {
-            background-color: #8e44ad;
+            background-color: #984800;
             transform: translateY(-2px);
+
         }
         button:active {
-            background-color: #7f3a96;
+            background-color: #bf843a;
             transform: translateY(0);
         }
         .form-group input[type="text"],
@@ -87,20 +89,49 @@
         .form-group input[type="password"] {
             background: #f7f7f7;
         }
+        .login-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #b85e00;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            width: auto;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .login-button:hover {
+            background-color: #6c3200;
+            transform: translateY(-2px);
+        }
+        .login-button:active {
+            background-color: #bf843a;
+            transform: translateY(0);
+        }
         @media (max-width: 480px) {
             .registration-container {
                 width: 100%;
                 padding: 20px;
                 box-shadow: none;
             }
+            .login-button {
+                right: 10px;
+                top: 10px;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
 <body>
 
+<button class="login-button" onclick="window.location.href='/login'">Войти</button>
+
 <div class="registration-container">
     <h2>Регистрация</h2>
-    <form action="/signup" method="POST"> <!-- URL /signup -->
+    <form action="/signup" method="POST">
         <div class="form-group">
             <label for="username">Имя пользователя:</label>
             <input type="text" id="username" name="username" placeholder="Введите имя" required>
