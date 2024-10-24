@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #000;
+            background: linear-gradient(90deg, #FF8200, #1b0c00);
             color: #fff;
             display: flex;
             justify-content: center;
@@ -33,9 +33,37 @@
             display: block;
             margin-bottom: 10px;
         }
+        .delete_acc {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #cc0000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            width: auto;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .delete_acc:hover {
+            background-color: #830000;
+            transform: translateY(-2px);
+        }
+        .delete_acc:active {
+            background-color: #ff0000;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
+
+    <form action="/del" method="post">
+        <input type="hidden" name="username" value="{{ username }}">
+        <button class="delete_acc" type="submit">
+            Удалить аккаунт
+        </button>
 
 <div class="profile-container">
     <h2>Профиль пользователя</h2>
