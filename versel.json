@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "main.py"
+    }
+  ],
+  "env": {
+    "DATABASE_URL": "sqlite:///./test.db",
+    "SECRET_KEY": "o7wELp+wMruYwOFbQq7HZNCRrA9bW7t3BNLrkpiiZTASyvBKLVLvAX04vr6VsOri",
+    "ALGORITHM": "HS256",
+    "ACCESS_TOKEN_EXPIRE_MINUTES": "30"
+  }
+}
